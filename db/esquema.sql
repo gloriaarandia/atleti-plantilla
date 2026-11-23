@@ -11,8 +11,10 @@ fecha_nacimiento date not null,
 equipo_actual varchar(100) not null,
 equipo_procedencia varchar(100) null,
 nacionalidad varchar(100) not null,
-url_imagen varchar(255) not null
+url_imagen varchar(255) not null,
+titular boolean not null default false
 );
+
 
 -- Tabla estadística
 Create table estadistica (
