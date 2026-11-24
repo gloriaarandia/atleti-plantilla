@@ -1,3 +1,40 @@
+.cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 14px 24px;
+  /* Mismo tono verde del campo para que no haya corte brusco */
+  background: linear-gradient(to bottom, #258d3b, #2b9a43);
+}
+
+.temporada {
+  margin: 0;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background-color: #161b33;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.btn-plantilla {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn-plantilla:hover {
+  background-color: rgba(255, 255, 255, 0.26);
+}
+
+
 .campo {
   position: relative;
   min-height: 100vh;
@@ -15,19 +52,6 @@
 
 .fila:nth-of-type(even) {
   background: #38b04d;
-}
-
-.temporada {
-  position: absolute;
-  top: 0.6rem;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
-  padding: 0.2rem 1.2rem;
-  background: var(--marino);
-  color: #fff;
-  border-radius: 999px;
-  font-size: 1.1rem;
 }
 
 .jugador {

@@ -20,6 +20,10 @@ detalle(id: number): Observable<Jugador> {
 estadisticas(id: number): Observable<Estadistica[]> {
   return this.http.get<Estadistica[]>(`${this.url}/${id}/estadisticas`);
 }
+
+listar(): Observable<Jugador[]> {
+  return this.http.get<Jugador[]>(this.url);
+}
 }
 
 //Es una clase cuya única misión es hablar con tu backend. 
