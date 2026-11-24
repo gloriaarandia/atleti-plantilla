@@ -15,7 +15,7 @@ import com.plantilla.backend.repository.JugadorRepository;
 
 @RestController
 @RequestMapping("/jugador")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = {"http://localhost:4200", "https://atleti-plantilla.vercel.app"})
 public class JugadorController {
 
 	private final JugadorRepository jugadorRepository;
