@@ -1,7 +1,7 @@
 INSERT INTO jugador (nombre, dorsal, posicion, fecha_nacimiento, equipo_actual, equipo_procedencia, nacionalidad, url_imagen, titular) VALUES
 -- Porteros
 ('J. Musso', 1, 'Portero', '1994-05-06', 'Atlético de Madrid', 'Atalanta', 'Argentina', 'j-musso.jpg', false),
-('Oblak', 13, 'Portero', '1993-01-07', 'Atlético de Madrid', 'Benfica', 'Eslovenia', 'oblak.jpg', true),
+('Oblak', 13, 'Portero', '1993-01-07', 'Atlético de Madrid', 'Benfica', 'Eslovenia', 'oblak.png', true),
 ('Esquivel', 25, 'Portero', '2005-09-30', 'Atlético de Madrid', 'Atlético Madrileno', 'España', 'esquivel.jpg', false),
 
 -- Defensas
@@ -30,7 +30,6 @@ INSERT INTO jugador (nombre, dorsal, posicion, fecha_nacimiento, equipo_actual, 
 ('Lookman', 11, 'Delantero', '1997-10-20', 'Atlético de Madrid', 'Atalanta', 'Nigeria', 'lookman.jpg', true),
 ('J. David', 15, 'Delantero', '2000-01-14', 'Atlético de Madrid', 'LOSC Lille', 'Canadá', 'j-david.jpg', true),
 ('J. Alvarez', 19, 'Delantero', '2000-01-31', 'Atlético de Madrid', 'Manchester City', 'Argentina', 'j-alvarez.jpg', true);
-
 
 INSERT INTO estadistica (id_jugador, temporada, competicion, goles, asistencias, apariciones, amarillas, rojas) VALUES
 -- Musso

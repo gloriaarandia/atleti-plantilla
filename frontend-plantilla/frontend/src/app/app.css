@@ -1,0 +1,31 @@
+.campo {
+  background: #3ad94b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.fila {
+  display: flex;
+  justify-content: space-around;
+}
+
+.jugador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jugador img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+}
+
+.jugador span {
+  font-weight: bold;
+  text-align: center;
+}

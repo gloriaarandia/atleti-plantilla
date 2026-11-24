@@ -1,0 +1,39 @@
+<div class="campo">
+  <div class="fila">
+    @for (jugador of delanteros(); track jugador.idJugador){
+      <div class="jugador">
+        <img [src]="'/jugadores/' + jugador.urlImagen" [alt]="jugador.nombre">
+        <span>{{ jugador.nombre }}</span>
+      </div>
+    }
+  </div>
+
+  <div class="fila">
+    @for (jugador of centrocampistas(); track jugador.idJugador){
+      <div class="jugador">
+        <img [src]="'/jugadores/' + jugador.urlImagen" [alt]="jugador.nombre">
+        <span>{{ jugador.nombre }}</span>
+      </div>
+    }
+  </div>
+
+  <div class="fila">
+    @for (jugador of defensas(); track jugador.idJugador){
+      <div class="jugador">
+        <img [src]="'/jugadores/' + jugador.urlImagen" [alt]="jugador.nombre">
+        <span>{{ jugador.nombre }}</span>
+      </div>
+    }
+  </div>
+
+  <div class="fila">
+    @for (jugador of porteros(); track jugador.idJugador){
+      <div class="jugador">
+        <img [src]="'/jugadores/' + jugador.urlImagen" [alt]="jugador.nombre">
+        <span>{{ jugador.nombre }}</span>
+      </div>
+    }
+  </div>
+</div>
+
+<router-outlet />

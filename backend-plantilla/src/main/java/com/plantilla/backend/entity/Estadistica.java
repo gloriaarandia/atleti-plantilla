@@ -2,6 +2,8 @@ package com.plantilla.backend.entity;
 
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,6 +23,7 @@ public class Estadistica {
 	private Integer idEstadistica;
 	@ManyToOne
 	@JoinColumn(name = "id_jugador")
+	@JsonIgnore
 	private Jugador jugador;
 	@Column(name = "temporada", nullable = false)
 	private String temporada;
