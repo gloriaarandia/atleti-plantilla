@@ -1,3 +1,10 @@
+<section class="campo-container">
+  @if (titulares().length === 0) {
+    <p class="mensaje-carga">
+      Cargando plantilla... el servidor puede tardar hasta un minuto en despertar.
+    </p>
+  }
+
 <div class="cabecera">
   <h2 class="temporada">2026/27</h2>
   <a routerLink="/plantilla" class="btn-plantilla">Ver plantilla completa</a>
@@ -39,4 +46,6 @@
       </div>
     }
   </div>
+
+<p class="aviso-datos">Datos de ejemplo; las estadísticas son ficticias.</p>
 </div>

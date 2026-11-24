@@ -1,26 +1,30 @@
 <a routerLink="/" class="volver">← Volver a la plantilla</a>
-@if (jugador(); as j) {
-  <div class="tarjeta">
-    <img class="foto" [src]="'/jugadores/' + j.urlImagen" [alt]="j.nombre">
-    <h1>{{ j.nombre }}</h1>
-    <p class="detalle">Dorsal {{ j.dorsal }} · {{ j.posicion }}</p>
 
-    <div class="datos">
-      <div class="dato">
-        <span class="valor">{{ j.nacionalidad }}</span>
-        <span class="etiqueta">Nacionalidad</span>
-      </div>
-      <div class="dato">
-        <span class="valor">{{ j.equipoActual }}</span>
-        <span class="etiqueta">Equipo actual</span>
-      </div>
-      <div class="dato">
-        <span class="valor">{{ j.equipoProcedencia ?? 'Cantera' }}</span>
-        <span class="etiqueta">Equipo de procedencia</span>
+<section class="ficha-container">
+  @if (jugador(); as j) {
+    <div class="tarjeta">
+      <img class="foto" [src]="'/jugadores/' + j.urlImagen" [alt]="j.nombre">
+      <h1>{{ j.nombre }}</h1>
+      <p class="detalle">Dorsal {{ j.dorsal }} · {{ j.posicion }}</p>
+
+      <div class="datos">
+        <div class="dato">
+          <span class="valor">{{ j.nacionalidad }}</span>
+          <span class="etiqueta">Nacionalidad</span>
+        </div>
+        <div class="dato">
+          <span class="valor">{{ j.equipoActual }}</span>
+          <span class="etiqueta">Equipo actual</span>
+        </div>
+        <div class="dato">
+          <span class="valor">{{ j.equipoProcedencia ?? 'Cantera' }}</span>
+          <span class="etiqueta">Equipo de procedencia</span>
+        </div>
       </div>
     </div>
-  </div>
-}
+  }
+  <p class="aviso-datos">Datos de ejemplo; las estadísticas son ficticias.</p>
+</section>
 
 <div class="tarjeta">
   <h2>Estadísticas</h2>

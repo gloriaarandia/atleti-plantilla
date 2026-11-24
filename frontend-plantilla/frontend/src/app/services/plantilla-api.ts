@@ -3,11 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Jugador } from '../models/jugador';
 import { Estadistica } from '../models/estadistica';
+import { environment } from '../../environments/environment';
+
 
 @Service()
 export class PlantillaApi {
   private http = inject(HttpClient);
-  private url = 'http://localhost:8080/jugador';
+  private url = `${environment.apiUrl}/jugador`;
 
   titulares(): Observable<Jugador[]> {
     return this.http.get<Jugador[]>(`${this.url}/titulares`);

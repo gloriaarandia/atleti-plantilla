@@ -93,3 +93,20 @@
   margin-right: 0.3rem;
   text-shadow: none;
 }
+
+.campo-container {
+  width: 100%;
+}
+
+.mensaje-carga {
+  text-align: center;
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.aviso-datos {
+  font-size: 0.85rem;
+  color: #666666;
+  text-align: center;
+  margin-top: 1.5rem;
+}
