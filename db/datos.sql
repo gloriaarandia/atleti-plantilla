@@ -124,3 +124,4 @@ INSERT INTO estadistica (id_jugador, temporada, competicion, goles, asistencias,
 ((SELECT id_jugador FROM jugador WHERE dorsal = 19), '2026/27', 'Liga', 7, 4, 12, 2, 0),
 ((SELECT id_jugador FROM jugador WHERE dorsal = 19), '2026/27', 'Champions', 3, 2, 5, 0, 0);
 
+
