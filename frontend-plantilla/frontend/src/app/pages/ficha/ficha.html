@@ -1,0 +1,79 @@
+<a routerLink="/" class="volver">← Volver a la plantilla</a>
+@if (jugador(); as j) {
+  <div class="tarjeta">
+    <img class="foto" [src]="'/jugadores/' + j.urlImagen" [alt]="j.nombre">
+    <h1>{{ j.nombre }}</h1>
+    <p class="detalle">Dorsal {{ j.dorsal }} · {{ j.posicion }}</p>
+
+    <div class="datos">
+      <div class="dato">
+        <span class="valor">{{ j.nacionalidad }}</span>
+        <span class="etiqueta">Nacionalidad</span>
+      </div>
+      <div class="dato">
+        <span class="valor">{{ j.equipoActual }}</span>
+        <span class="etiqueta">Equipo actual</span>
+      </div>
+      <div class="dato">
+        <span class="valor">{{ j.equipoProcedencia ?? 'Cantera' }}</span>
+        <span class="etiqueta">Equipo de procedencia</span>
+      </div>
+    </div>
+  </div>
+}
+
+<div class="tarjeta">
+  <h2>Estadísticas</h2>
+
+  <div class="datos">
+    <div class="dato">
+      <span class="numero">{{ totalGoles() }}</span>
+      <span class="etiqueta">Goles</span>
+    </div>
+    <div class="dato">
+      <span class="numero">{{ totalAsistencias() }}</span>
+      <span class="etiqueta">Asistencias</span>
+    </div>
+  </div>
+
+  <button (click)="alternarTabla()">
+    {{ mostrarTabla() ? 'Ocultar estadísticas' : 'Todas las estadísticas' }}
+  </button>
+
+  @if (mostrarTabla()) {
+    @if (estadisticas().length > 0) {
+      <table>
+        <tr>
+          <th>Temporada</th>
+          <th>Competición</th>
+          <th>Apariciones</th>
+          <th>Goles</th>
+          <th>Asistencias</th>
+          <th>Amarillas</th>
+          <th>Rojas</th>
+        </tr>
+        @for (e of estadisticas(); track e.idEstadistica) {
+          <tr>
+            <td>{{ e.temporada }}</td>
+            <td>{{ e.competicion }}</td>
+            <td>{{ e.apariciones }}</td>
+            <td>{{ e.goles }}</td>
+            <td>{{ e.asistencias }}</td>
+            <td>{{ e.amarillas }}</td>
+            <td>{{ e.rojas }}</td>
+          </tr>
+        }
+        <tr>
+          <td colspan="2"><strong>Total</strong></td>
+          <td><strong>{{ totalApariciones() }}</strong></td>
+          <td><strong>{{ totalGoles() }}</strong></td>
+          <td><strong>{{ totalAsistencias() }}</strong></td>
+          <td><strong>{{ totalAmarillas() }}</strong></td>
+          <td><strong>{{ totalRojas() }}</strong></td>
+        </tr>
+      </table>
+    } @else {
+      <p>No hay estadísticas disponibles.</p>
+    }
+  }
+</div>

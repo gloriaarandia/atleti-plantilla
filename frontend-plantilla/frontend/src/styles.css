@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --rojo: #cb3524;
+  --rojo-oscuro: #a82a1c;
+  --marino: #1b1f4b;
+  --marino-oscuro: #11143a;
+  --gris-claro: #f0f1f7;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, .numero, .temporada {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}

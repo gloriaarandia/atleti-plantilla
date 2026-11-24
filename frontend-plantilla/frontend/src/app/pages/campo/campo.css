@@ -1,0 +1,71 @@
+.campo {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #2f9e44;
+}
+
+.fila {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.fila:nth-of-type(even) {
+  background: #38b04d;
+}
+
+.temporada {
+  position: absolute;
+  top: 0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0.2rem 1.2rem;
+  background: var(--marino);
+  color: #fff;
+  border-radius: 999px;
+  font-size: 1.1rem;
+}
+
+.jugador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.jugador:hover {
+  transform: translateY(-6px) scale(1.05);
+}
+
+.jugador img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+.jugador span {
+  margin-top: 0.4rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.dorsal {
+  background: var(--rojo);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.1rem 0.55rem;
+  margin-right: 0.3rem;
+  text-shadow: none;
+}

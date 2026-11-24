@@ -2,6 +2,7 @@ import { Service, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Jugador } from '../models/jugador';
+import { Estadistica } from '../models/estadistica';
 
 @Service()
 export class PlantillaApi {
@@ -11,6 +12,14 @@ export class PlantillaApi {
   titulares(): Observable<Jugador[]> {
     return this.http.get<Jugador[]>(`${this.url}/titulares`);
   }
+
+detalle(id: number): Observable<Jugador> {
+  return this.http.get<Jugador>(`${this.url}/${id}`);
+}
+
+estadisticas(id: number): Observable<Estadistica[]> {
+  return this.http.get<Estadistica[]>(`${this.url}/${id}/estadisticas`);
+}
 }
 
 //Es una clase cuya única misión es hablar con tu backend. 
